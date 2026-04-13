@@ -1,0 +1,6 @@
+name = "voice-cloudflare-example"
+main = "src/worker.ts"
+compatibility_date = "2026-04-10"
+
+[observability]
+enabled = true

@@ -1,0 +1,22 @@
+{
+  "name": "web-voice-call",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "bun run --watch src/server.ts",
+    "build": "tsdown",
+    "check-types": "tsc -b",
+    "start": "bun run dist/server.mjs"
+  },
+  "dependencies": {
+    "@Slaabkit/voice-ai": "workspace:*",
+    "dotenv": "catalog:",
+    "hono": "^4.8.2"
+  },
+  "devDependencies": {
+    "@Slaabkit/config": "workspace:*",
+    "@types/bun": "catalog:",
+    "tsdown": "^0.16.5",
+    "typescript": "catalog:"
+  }
+}

@@ -3,6 +3,9 @@ node_modules
 .pnp
 .pnp.js
 
+openspec
+.*
+
 # Build outputs
 dist
 build

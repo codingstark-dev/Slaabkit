@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voice AI Browser Agent</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="card">
+        <h1>Voice AI Browser Agent</h1>
+        <p class="muted">
+          Join once, start streaming your microphone, and hear server pipeline responses.
+        </p>
+
+        <div class="controls">
+          <label>
+            Room
+            <input id="room" value="demo-room" />
+          </label>
+          <div class="buttons">
+            <button id="join">Join</button>
+            <button id="call" disabled>Start Call</button>
+            <button id="hangup" disabled>Hang Up</button>
+          </div>
+        </div>
+
+        <div class="controls">
+          <label>
+            Debug transcript
+            <input id="debug-text" placeholder="Type text to trigger agent instantly" />
+          </label>
+          <div class="buttons">
+            <button id="send-text" disabled>Send Text</button>
+          </div>
+        </div>
+
+        <div class="status">
+          <strong>Status:</strong>
+          <span id="status">Idle</span>
+        </div>
+
+        <div class="logs" id="logs"></div>
+      </section>
+    </main>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

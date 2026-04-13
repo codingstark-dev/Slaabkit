@@ -1,0 +1,107 @@
+{
+  "name": "@Slaabkit/voice-ai",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    },
+    "./core": {
+      "types": "./src/core/index.ts",
+      "default": "./src/core/index.ts"
+    },
+    "./transports/twilio": {
+      "types": "./src/transports/twilio.ts",
+      "default": "./src/transports/twilio.ts"
+    },
+    "./transports/vonage": {
+      "types": "./src/transports/vonage.ts",
+      "default": "./src/transports/vonage.ts"
+    },
+    "./transports/telnyx": {
+      "types": "./src/transports/telnyx.ts",
+      "default": "./src/transports/telnyx.ts"
+    },
+    "./transports/plivo": {
+      "types": "./src/transports/plivo.ts",
+      "default": "./src/transports/plivo.ts"
+    },
+    "./transports/daily": {
+      "types": "./src/transports/daily.ts",
+      "default": "./src/transports/daily.ts"
+    },
+    "./transports/cloudflare-calls": {
+      "types": "./src/transports/cloudflare-calls.ts",
+      "default": "./src/transports/cloudflare-calls.ts"
+    },
+    "./transports/browser-ws": {
+      "types": "./src/transports/browser-ws.ts",
+      "default": "./src/transports/browser-ws.ts"
+    },
+    "./vad": {
+      "types": "./src/vad/index.ts",
+      "default": "./src/vad/index.ts"
+    },
+    "./stt": {
+      "types": "./src/stt/index.ts",
+      "default": "./src/stt/index.ts"
+    },
+    "./orchestrators/vercel-ai": {
+      "types": "./src/orchestrators/vercel-ai.ts",
+      "default": "./src/orchestrators/vercel-ai.ts"
+    },
+    "./orchestrators/mastra": {
+      "types": "./src/orchestrators/mastra.ts",
+      "default": "./src/orchestrators/mastra.ts"
+    },
+    "./orchestrators/voltagent": {
+      "types": "./src/orchestrators/voltagent.ts",
+      "default": "./src/orchestrators/voltagent.ts"
+    },
+    "./tts": {
+      "types": "./src/tts/index.ts",
+      "default": "./src/tts/index.ts"
+    },
+    "./output": {
+      "types": "./src/output/index.ts",
+      "default": "./src/output/index.ts"
+    },
+    "./sentence-boundary": {
+      "types": "./src/sentence-boundary/index.ts",
+      "default": "./src/sentence-boundary/index.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsdown",
+    "dev": "bun run --watch src/index.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "check-types": "tsc -b"
+  },
+  "dependencies": {
+    "@Slaabkit/env": "workspace:*"
+  },
+  "peerDependencies": {
+    "ai": ">=4.0.0",
+    "hono": ">=4.0.0"
+  },
+  "peerDependenciesMeta": {
+    "ai": {
+      "optional": true
+    },
+    "hono": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@Slaabkit/config": "workspace:*",
+    "@types/bun": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "^3.1.1",
+    "tsdown": "^0.16.5"
+  }
+}

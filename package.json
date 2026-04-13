@@ -7,6 +7,7 @@
       "packages/*"
     ],
     "catalog": {
+      "vitest": "^3.1.1",
       "dotenv": "^17.2.2",
       "zod": "^4.1.13",
       "typescript": "^5",
